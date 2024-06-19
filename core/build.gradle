@@ -2,7 +2,6 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'com.google.dagger.hilt.android'
 
 }
 
@@ -33,26 +32,18 @@ android {
         jvmTarget = '17'
     }
 }
-
 dependencies {
-    implementation project(':core')
-    implementation project(':domain')
 
     implementation libs.androidx.core.ktx
-
-    // Retrofit
-    implementation libs.retrofit
-    implementation libs.converter.gson
-    implementation libs.adapter.rxjava3
-
-    // Chucker
-    debugImplementation libs.library
-    releaseImplementation libs.library.no.op
+    implementation libs.androidx.appcompat
 
     // Gson
     implementation libs.gson
 
-    //Dagger-Hilt
-    implementation libs.hilt.android
-    kapt libs.hilt.compiler
+    // Kotlin Coroutines
+    implementation libs.kotlinx.coroutines.core
+
+    // Retrofit
+    implementation libs.retrofit
+    implementation libs.converter.gson
 }
