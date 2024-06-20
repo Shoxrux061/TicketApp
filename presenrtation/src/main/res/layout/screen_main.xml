@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context=".main.MainScreen">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.5"
+        android:background="#9E9E9E" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        app:menu="@menu/main_menu"
+        app:labelVisibilityMode="labeled"
+        android:layout_height="80dp"
+        app:itemBackground="@null"
+        app:itemIconSize="30sp"
+        app:itemIconTint="@color/nav_color"
+        app:itemTextColor="@color/nav_color"
+        android:background="@color/background_color" />
+
+</LinearLayout>

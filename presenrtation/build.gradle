@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         minSdk 24
-
+        viewBinding.enable true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -46,4 +46,21 @@ dependencies {
     //Dagger-Hilt
     implementation libs.hilt.android
     kapt libs.hilt.compiler
+
+    //ViewModel
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+
+    //LiveData
+    implementation libs.androidx.lifecycle.livedata.ktx
+
+    //Navigation Component
+    implementation libs.androidx.navigation.fragment.ktx
+    implementation libs.androidx.navigation.ui.ktx
+
+    // reflection-based flavor
+    implementation libs.viewbindingpropertydelegate.full
+}
+
+kapt {
+    correctErrorTypes = true
 }

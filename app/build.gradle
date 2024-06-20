@@ -65,3 +65,7 @@ dependencies {
     releaseImplementation libs.library.no.op
 
 }
+
+kapt {
+    correctErrorTypes = true
+}

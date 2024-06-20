@@ -34,8 +34,14 @@ android {
 }
 
 dependencies {
+
     implementation project(':core')
+
     //Dagger-Hilt
     implementation libs.hilt.android
     kapt libs.hilt.compiler
+}
+
+kapt {
+    correctErrorTypes = true
 }

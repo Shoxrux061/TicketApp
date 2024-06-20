@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_color">#0C0C0C</color>
+    <color name="grey7">#DBDBDB</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blue">#4C95FE</color>
+    <color name="dark_blue">#1139FF</color>
+    <color name="green">#4CB24E</color>
+    <color name="dark_green">#015905</color>
+    <color name="pink">#FF6D6D</color>
+    <color name="orange">#F36E36</color>
+    <color name="colorBottomNavActive">#4C95FE</color>
+    <color name="colorBottomNavInactive">#DBDBDB</color>
+
+</resources>
