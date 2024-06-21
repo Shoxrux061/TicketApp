@@ -15,11 +15,20 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import uz.isystem.core.Constants
+import uz.isystem.data.data.models.MusicalOffersResponse
+import uz.isystem.data.data.network.OffersService
+import uz.isystem.data.data.repo.RepositoryImpl
+import uz.isystem.domain.TicketsRepository
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
+
+    @[Provides Singleton]
+    fun provideTicketsRepository(service: OffersService): TicketsRepository<MusicalOffersResponse?> {
+        return RepositoryImpl(service)
+    }
 
     @[Provides Singleton]
     fun provideRetrofit(okHttpClient: OkHttpClient, gson: Gson): Retrofit {

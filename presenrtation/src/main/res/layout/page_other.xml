@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background_color"
+    android:layout_height="match_parent"
+    tools:context=".main.other.OtherPage">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/sf_regular"
+            android:textSize="18sp"
+            android:text="Еще не доступно"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/button_shape"
+            android:id="@+id/button_back"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:text="Вернутся на главную"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_regular"
+            android:layout_marginHorizontal="20dp" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

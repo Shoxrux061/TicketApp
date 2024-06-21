@@ -3,7 +3,7 @@ package uz.isystem.data.data.local_data
 import android.content.Context
 import android.content.SharedPreferences
 
-class LocalStorage private constructor(context: Context){
+class LocalStorage private constructor(context: Context) {
 
     private val lastInputKey = "KEY_LAST_INPUT"
 
@@ -11,7 +11,8 @@ class LocalStorage private constructor(context: Context){
         sharedPreferences = context.getSharedPreferences("cache", Context.MODE_PRIVATE)
 
     }
-    companion object{
+
+    companion object {
         private var appCache: LocalStorage? = null
         private var sharedPreferences: SharedPreferences? = null
 
@@ -26,12 +27,12 @@ class LocalStorage private constructor(context: Context){
         }
     }
 
-    fun setLastInput(text:String){
+    fun setLastInput(text: String) {
         sharedPreferences!!.edit().putString(lastInputKey, text).apply()
     }
 
-    fun getLastInput() : String{
-        return sharedPreferences!!.getString(lastInputKey,"Минск")!!
+    fun getLastInput(): String {
+        return sharedPreferences!!.getString(lastInputKey, "Минск")!!
     }
 
 }

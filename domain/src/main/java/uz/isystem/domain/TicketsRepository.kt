@@ -1,8 +1,10 @@
 package uz.isystem.domain
 
 import uz.isystem.core.ResultWrapper
+import javax.inject.Singleton
 
-interface TicketsRepository {
-    suspend fun getTickets(): ResultWrapper<Any?,Any?>
+
+interface TicketsRepository<T> {
+    suspend fun getTickets(): ResultWrapper<T?,Any?>
 
 }
