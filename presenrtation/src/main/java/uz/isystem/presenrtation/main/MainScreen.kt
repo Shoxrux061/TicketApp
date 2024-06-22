@@ -10,7 +10,7 @@ import uz.isystem.presenrtation.R
 import uz.isystem.presenrtation.base.BaseFragment
 import uz.isystem.presenrtation.databinding.ScreenMainBinding
 
-class MainScreen : BaseFragment(R.layout.screen_main),ViewPagerInteractionListener {
+class MainScreen : BaseFragment(R.layout.screen_main), ViewPagerInteractionListener {
 
     private val binding by viewBinding(ScreenMainBinding::bind)
     private var doubleBackToExitPressedOnce = false

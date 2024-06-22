@@ -3,7 +3,7 @@ package uz.isystem.presenrtation.main.home
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import uz.isystem.data.data.models.Offer
+import uz.isystem.data.data.models.music_offer.Offer
 import uz.isystem.presenrtation.R
 import uz.isystem.presenrtation.databinding.ItemMusicOfferBinding
 
@@ -24,10 +24,18 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
             binding.price.text = data.price.value.toString()
             binding.city.text = data.town
             binding.title.text = data.title
-            when(data.id){
-                1->{binding.image.setImageResource(R.drawable.music_offer1)}
-                2->{binding.image.setImageResource(R.drawable.music_offer2)}
-                3->{binding.image.setImageResource(R.drawable.music_offer3)}
+            when (data.id) {
+                1 -> {
+                    binding.image.setImageResource(R.drawable.music_offer1)
+                }
+
+                2 -> {
+                    binding.image.setImageResource(R.drawable.music_offer2)
+                }
+
+                3 -> {
+                    binding.image.setImageResource(R.drawable.music_offer3)
+                }
             }
         }
     }

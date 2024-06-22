@@ -1,4 +1,4 @@
-package uz.isystem.presenrtation.main.home
+package uz.isystem.presenrtation.search
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -7,31 +7,30 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import uz.isystem.core.ResultWrapper
-import uz.isystem.data.data.models.music_offer.MusicalOffersResponse
-import uz.isystem.domain.TicketsRepository
+import uz.isystem.data.data.models.ticket_offer.TicketOfferResponse
+import uz.isystem.domain.TicketOfferRepository
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(
-    private val repository: TicketsRepository<MusicalOffersResponse?>
+class SearchViewModel @Inject constructor(
+    private val repository: TicketOfferRepository<TicketOfferResponse?>
 ) : ViewModel() {
 
 
-    private val successData: MutableLiveData<MusicalOffersResponse?> =
-        MutableLiveData<MusicalOffersResponse?>()
-    val successResponse: LiveData<MusicalOffersResponse?>
+    private val successData: MutableLiveData<TicketOfferResponse?> =
+        MutableLiveData<TicketOfferResponse?>()
+    val successResponse: LiveData<TicketOfferResponse?>
         get() = successData
 
     private val errorData: MutableLiveData<String?> = MutableLiveData<String?>()
     val errorResponseEvery: LiveData<String?>
         get() = errorData
 
-    fun getMusicalOffers() {
+
+    fun getTicketOffer() {
+
         viewModelScope.launch {
-            when (val result = repository.getMusicOffers(
-
-
-            )) {
+            when (val result = repository.getTicketOffers()) {
                 is ResultWrapper.Success -> {
                     successData.postValue(result.data)
                 }

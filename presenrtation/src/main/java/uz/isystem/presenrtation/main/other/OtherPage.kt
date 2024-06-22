@@ -4,10 +4,8 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import androidx.viewpager2.widget.ViewPager2
 import uz.isystem.presenrtation.R
 import uz.isystem.presenrtation.base.BaseFragment
-import uz.isystem.presenrtation.main.MainScreen
 import uz.isystem.presenrtation.main.ViewPagerInteractionListener
 
 class OtherPage : BaseFragment(R.layout.page_other) {

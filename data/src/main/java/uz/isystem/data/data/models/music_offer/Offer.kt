@@ -1,4 +1,4 @@
-package uz.isystem.data.data.models
+package uz.isystem.data.data.models.music_offer
 
 data class Offer(
     val id: Int,

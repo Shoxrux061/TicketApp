@@ -9,5 +9,18 @@
         android:id="@+id/mainScreen"
         android:name="uz.isystem.presenrtation.main.MainScreen"
         android:label="screen_main"
-        tools:layout="@layout/screen_main" />
+        tools:layout="@layout/screen_main" >
+        <action
+            android:id="@+id/action_mainScreen_to_searchScreen"
+            app:destination="@id/searchScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchScreen"
+        android:name="uz.isystem.presenrtation.search.SearchScreen"
+        android:label="screen_search"
+        tools:layout="@layout/screen_search" >
+        <argument
+            android:name="city"
+            app:argType="string" />
+    </fragment>
 </navigation>
